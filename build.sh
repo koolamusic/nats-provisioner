@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -ex
 
-ver=(NATS_SERVER 2.2.2)
+ver=(NTRY dist)
 
 (
-	cd ./build
+	cd "${ver[1]}"
 	docker build --tag nats:2.2.2-alpine3.13 .
 )

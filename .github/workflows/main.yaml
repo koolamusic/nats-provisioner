@@ -12,4 +12,4 @@ jobs:
         ./build.sh
     - name: Run images and exit on success
       run: |
-        ./run.sh
+        ./testrun.sh
