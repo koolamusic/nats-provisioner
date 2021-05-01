@@ -2,8 +2,11 @@ FROM alpine:3.13
 
 ENV NATS_SERVER 2.2.2
 
+# setup work dir (custom for caprover)
 WORKDIR /workspace
-COPY . .
+
+COPY dist/nats-server.conf .
+COPY dist/docker-entrypoint.sh .
 
 RUN set -eux; \
 	apkArch="$(apk --print-arch)"; \
