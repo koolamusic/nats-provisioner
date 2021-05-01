@@ -3,7 +3,7 @@ FROM alpine:3.13
 ENV NATS_SERVER 2.2.2
 
 # setup work dir
-WORKDIR /workspace
+WORKDIR /dist
 COPY . .
 
 RUN set -eux; \
