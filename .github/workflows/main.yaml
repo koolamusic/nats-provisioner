@@ -1,0 +1,15 @@
+name: Docker build test workflow
+on: [push, pull_request]
+
+jobs:
+  linux:
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v1
+    - name: Build images
+      run: |
+        ./build.sh
+    - name: Run images and exit on success
+      run: |
+        ./run.sh
