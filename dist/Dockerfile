@@ -29,5 +29,5 @@ RUN set -eux; \
 	\
 	apk del --no-cache --no-network buildtmp
 
-ENTRYPOINT ["docker-entrypoint.sh"]
+ENTRYPOINT ["./docker-entrypoint.sh"]
 CMD ["nats-server", "--config", "nats-server.conf"]

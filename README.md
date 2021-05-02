@@ -44,3 +44,11 @@ running this command.
 ```sh
 shasum -a 256 nats-server.zip
 ```
+
+## Todo
+
+- [ ] Add `sed` script to append authentication credentials into `nats-server.conf` file.
+  - [ ] Export `env` in build environment
+  - [ ] read `env` in dockerfile steps and create variables
+  - [ ] `sed` the variables into the `nats-server.conf` file
+  - [ ] Setup entrypoint and start nats server with configuration options
